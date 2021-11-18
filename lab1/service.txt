@@ -1,0 +1,11 @@
+[Unit]
+Description=My systemd service.
+
+[Service]
+Type=forking
+ExecStart=/bin/bash /home/krasi/Downloads/hello.sh -D
+RemainAfterExit=True
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
