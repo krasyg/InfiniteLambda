@@ -1,0 +1,10 @@
+[Unit]
+Description=My Example systemd service.
+
+[Service]
+Type=idle
+ExecStart=/bin/sh /home/krasi/Downloads/hello.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
