@@ -6,7 +6,7 @@ if [[ -n $check ]]; then
     echo "Package has already been installed"
     exit 77
 else
-    number=$(sudo dnf install net-tools | rpm -ql net-tools | grep bin | xargs ls -i | 
+    number=$(sudo dnf install net-tools | rpm -ql net-tools | grep bin | xargs ls -i | sort
     head -1 | netstat --statistics --raw | grep requests | awk {'print $1'})
 
 
