@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> "Private IP address: 172.31.42.240" </h2>
+
+<h2>"Default Gateway: 172.31.32.1" </h2>
+
+<h2>"MAC address: 06:9f:e4:8f:28:82" </h2>
+
+<h2>"Hosts on 172.31.42.240/20: 4096"</h2>
+
+
+</body>
+</html>
+

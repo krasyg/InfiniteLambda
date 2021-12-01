@@ -1,0 +1,12 @@
+sudo amazon-linux-extras enable nginx1
+sudo yum clean metadata
+sudo yum -y install nginx
+
+change port: vi /etc/nginx/nginx.conf
+
+IP address: ifconfig -a
+gateway: route -n
+MAC: ip link show
+
+change html: /usr/share/nginx/html
+
