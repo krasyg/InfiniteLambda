@@ -1,0 +1,16 @@
+Create a VM in VirtualBox using VBoxManage only
+Parameters:
+Ubuntu 18.04LTS
+1GB ram (2 if you can spare)
+2 CPU cores
+20GB disk size
+
+
+VBoxManage createvm --name "Ubuntu" --ostype Ubuntu_64 --register
+VBoxManage modifyvm "Ubuntu" --cpus 2 --memory 2048 --vram 128 --graphicscontroller vmsvga --usbohci on
+VBoxManage createhd --filename ~/VirtualBox\ VMs/Ubuntu.vdi --size 20480 --variant Standard
+VBoxManage storagectl "Ubuntu" --name "SATA Controller" --add sata --bootable on
+VBoxManage storageattach "Ubuntu" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium ~/VirtualBox\ VMs/Ubuntu.vdi 
+VBoxManage storagectl "Ubuntu" --name "IDE Controller" --add ide
+VBoxManage storageattach "Ubuntu" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium ~/Downloads/ubuntu-20.04.3-desktop-amd64.iso
+VBoxManage startvm "Ubuntu"
