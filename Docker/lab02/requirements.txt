@@ -1,0 +1,8 @@
+Create image named 'test_arg:<username>.<group>', tagged with two different usernames and groups.
+   Pass <username> and <group> as ARGs to the builder.
+   Copy file hello.py to the image and change owner of the file to <username> and set group.
+
+   docker run test_arg:<username> must list the file (ls -l) to show owner and group was set correctly.
+   As a base image, use Alpine (which is the preferred image because of its size).
+
+Following task 2. try to optimize the number of layers of test_arg image.
