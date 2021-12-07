@@ -1,8 +1,0 @@
-1. Create image named 'hello' that prints 'Hello World!' if you run: docker run hello.
-   Constraints:
-    - as a base image, you must use python https://hub.docker.com/_/python?tab=description
-    - script hello.py (from this repository) must print the statement
-    - Dockerfile for your image must include instruction FROM, WORKDIR, COPY, ENTRYPOINT, CMD
-   Hint: in linux container, python script is run like `python3 hello.py`
-   
-   Following the task 1. push the image to your private repository in Docker Hub.
