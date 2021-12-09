@@ -4,7 +4,8 @@
 docker build -t todo-manager-img /home/krasi/Docker/app
 docker volume create --name todo-vol
 
-for i in $(seq 1 3) do 
+for i in $(seq 1 3) 
+do 
     echo $(docker run -dp 300$i:3000 --name todo-manager$i \
     --mount source=todo-vol,target=/etc/todos todo-manager-img)
 done
