@@ -5,8 +5,8 @@ docker build -t todo-manager-img /home/krasi/Docker/app
 docker volume create --name todo-vol
 
 for i in $(seq 1 3) do 
-    docker run -dp 300$i:3000 --name todo-manager$i \
-    --mount source=todo-vol,target=/etc/todos todo-manager-img
+    echo $(docker run -dp 300$i:3000 --name todo-manager$i \
+    --mount source=todo-vol,target=/etc/todos todo-manager-img)
 done
 
 crontab -l > crontab_backup
