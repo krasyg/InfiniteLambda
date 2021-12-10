@@ -14,6 +14,6 @@ ENTRYPOINT ["/bin/hello"]
 CMD ["hello"]
 
 # Build multi-arch image
-# docker buildx build --push --platform linux/arm/v7,linux/arm64,linux/amd64 -t krasyg/multiarch-hello .
+# docker buildx build --push --platform linux/arm/v7,linux/arm64,linux/amd64 -t krasyg/multiarch .
 # docker push localhost:5007/multiarch:latest
 
