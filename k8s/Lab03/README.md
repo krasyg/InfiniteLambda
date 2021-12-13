@@ -23,7 +23,7 @@ Pod Template:
   Labels:  app=nginx
   Containers:
    nginx:
-    Image:        nginx:1.14.2
+    Image:        nginx:stable
     Port:         80/TCP
     Host Port:    0/TCP
     Environment:  <none>
