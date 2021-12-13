@@ -42,7 +42,7 @@ Events:
   Normal  ScalingReplicaSet  9m54s  deployment-controller  Scaled up replica set nginx-deployment-66b6c48dd5 to 2
 ```
 
-## Create pod imperative
+## Create pod imperatively
 
 ```
 $ kubectl run nginx --image=nginx:stable --port=80
