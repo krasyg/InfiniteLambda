@@ -13,6 +13,7 @@ commit: 76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b
 
 ```
 $ kubectl describe services
+
 Name:              kubernetes
 Namespace:         default
 Labels:            component=apiserver
@@ -36,6 +37,7 @@ Events:            <none>
 
 ```
 $ kubectl get pods --all-namespaces
+
 NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
 kube-system   coredns-78fcd69978-94868           1/1     Running   0             26m
 kube-system   etcd-minikube                      1/1     Running   0             26m
@@ -44,4 +46,11 @@ kube-system   kube-controller-manager-minikube   1/1     Running   0            
 kube-system   kube-proxy-mgn64                   1/1     Running   0             26m
 kube-system   kube-scheduler-minikube            1/1     Running   0             26m
 kube-system   storage-provisioner                1/1     Running   1 (25m ago)   26m
+```
+
+## Detailed info on pod
+
+```
+$ kubectl describe pod -n kube-system coredns-78fcd69978-94868
+
 ```
