@@ -1,4 +1,4 @@
-## Create pod declarativly 
+## Create pod declaratively 
 
 ```
 $ kubectl apply -f /k8s/deployment.yaml
