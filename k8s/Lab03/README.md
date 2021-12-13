@@ -49,7 +49,7 @@ $ kubectl run nginx --image=nginx:stable --port=80
 $ kubectl describe pod nginx
 
 
-ame:         nginx
+Name:         nginx
 Namespace:    default
 Priority:     0
 Node:         minikube/192.168.49.2
