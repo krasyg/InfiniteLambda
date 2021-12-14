@@ -106,6 +106,7 @@ Events:
 
 ## Get events of created deployment
 
+
 ```
 $ kubectl get events | grep -i ubuntu-deploy
 
