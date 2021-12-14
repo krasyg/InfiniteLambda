@@ -2,25 +2,6 @@
 
 ```
 
-# job.yaml
-
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: msg-timer
-spec:
-  completions: 3
-  template:
-    metadata:
-      name: msg-timer
-    spec:
-      containers:
-      - name: msg-timer
-        image: busybox
-        command: ["/bin/sh","-c"]
-        args: ["echo 'one message to be printed'; sleep 3"]
-      restartPolicy: OnFailure
-
 $ kubectl apply -f job.yaml
 job.batch/msg-timer created
 
