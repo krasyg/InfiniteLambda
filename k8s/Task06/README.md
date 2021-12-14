@@ -21,11 +21,10 @@ spec:
         args: ["echo 'one message to be printed'; sleep 3"]
       restartPolicy: OnFailure
 
-$ kubectl apply -f job.yaml && 
+$ kubectl apply -f job.yaml
 job.batch/msg-timer created
 
 $ kubectl get pods --watch
-
 NAME                                READY   STATUS    RESTARTS        AGE
 msg-timer--1-kdzdb                  0/1     Pending   0               0s
 msg-timer--1-kdzdb                  0/1     ContainerCreating   0               0s
