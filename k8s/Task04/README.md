@@ -1,7 +1,7 @@
 ## Create Ubuntu deployment and get information about running deployments on cluster
 
 ```
-kubectl apply -f deployment.yaml 
+$ kubectl apply -f deployment.yaml 
 
 $ kubectl describe deployments
 
@@ -104,3 +104,38 @@ Events:
   Normal  ScalingReplicaSet  105m  deployment-controller  Scaled up replica set ubuntu-deploy-755b476648 to 1
   
   ```
+## Get events of created deployment
+
+```
+$ kubectl get events | grep -i ubuntu-deploy
+
+16m         Normal   Scheduled              pod/ubuntu-deploy-755b476648-52wjj    Successfully assigned default/ubuntu-deploy-755b476648-52wjj to minikube-m02
+16m         Normal   Pulling                pod/ubuntu-deploy-755b476648-52wjj    Pulling image "ubuntu"
+16m         Normal   Pulled                 pod/ubuntu-deploy-755b476648-52wjj    Successfully pulled image "ubuntu" in 2.388993688s
+16m         Normal   Created                pod/ubuntu-deploy-755b476648-52wjj    Created container ubuntu
+16m         Normal   Started                pod/ubuntu-deploy-755b476648-52wjj    Started container ubuntu
+16m         Normal   SuccessfulCreate       replicaset/ubuntu-deploy-755b476648   Created pod: ubuntu-deploy-755b476648-52wjj
+16m         Normal   ScalingReplicaSet      deployment/ubuntu-deploy              Scaled up replica set ubuntu-deploy-755b476648 to 1
+
+```
+
+## Scale up to 6 pods on same deployment
+
+```
+$ kubectl scale --replicas=6 deployment ubuntu-deploy
+
+ubuntu-deploy-755b476648-52wjj      1/1     Running   0              115m
+ubuntu-deploy-755b476648-57p6b      1/1     Running   0              65s
+ubuntu-deploy-755b476648-dfsrc      1/1     Running   0              65s
+ubuntu-deploy-755b476648-hhc6n      1/1     Running   0              65s
+ubuntu-deploy-755b476648-k6rvm      1/1     Running   0              65s
+ubuntu-deploy-755b476648-wbmk5      1/1     Running   0              65s
+
+```
+
+## Delete created deployment
+
+```
+$ kubectl delete deployments ubuntu-deploy
+
+```
