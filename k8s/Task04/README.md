@@ -102,8 +102,8 @@ Events:
   Type    Reason             Age   From                   Message
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  105m  deployment-controller  Scaled up replica set ubuntu-deploy-755b476648 to 1
-  
-  ```
+```
+
 ## Get events of created deployment
 
 ```
@@ -116,7 +116,6 @@ $ kubectl get events | grep -i ubuntu-deploy
 16m         Normal   Started                pod/ubuntu-deploy-755b476648-52wjj    Started container ubuntu
 16m         Normal   SuccessfulCreate       replicaset/ubuntu-deploy-755b476648   Created pod: ubuntu-deploy-755b476648-52wjj
 16m         Normal   ScalingReplicaSet      deployment/ubuntu-deploy              Scaled up replica set ubuntu-deploy-755b476648 to 1
-
 ```
 
 ## Scale up to 6 pods on same deployment
@@ -130,12 +129,10 @@ ubuntu-deploy-755b476648-dfsrc      1/1     Running   0              65s
 ubuntu-deploy-755b476648-hhc6n      1/1     Running   0              65s
 ubuntu-deploy-755b476648-k6rvm      1/1     Running   0              65s
 ubuntu-deploy-755b476648-wbmk5      1/1     Running   0              65s
-
 ```
 
 ## Delete created deployment
 
 ```
 $ kubectl delete deployments ubuntu-deploy
-
 ```
