@@ -4,6 +4,7 @@
 
 $ kubectl apply -f pod.yaml -n limits
 
+
 $ kubectl top pod over-memo-pod -n limits
 NAME            CPU(cores)   MEMORY(bytes)   
 over-memo-pod   0m           0Mi      
