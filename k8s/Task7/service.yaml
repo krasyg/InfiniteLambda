@@ -15,3 +15,5 @@ spec:
   selector:    
     app: lab7
   type: NodePort
+  
+  
