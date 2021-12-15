@@ -44,6 +44,5 @@ Firefox can’t establish a connection to the server at 192.168.49.2:30973.
 
 ```
 
-```
 **When testing with other img (nginx) app is accessable from the internet on the specified port**
-```
+
