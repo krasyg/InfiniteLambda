@@ -1,3 +1,6 @@
+## Imperative 
+
+
 ```
 $ kubectl run task7 --image=joji95/k8s-static-web-app --port=80 -n tasks
 $ kubectl expose pod -n tasks task7 --type=NodePort --port=80 
