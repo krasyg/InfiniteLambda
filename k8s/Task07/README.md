@@ -8,4 +8,4 @@ $ kubectl expose deployment task7 --protocol=TCP --type=NodePort --port=8080 --t
 $ minikube service task7-svc
 ```
 
-!(/home/krasi/Downloads/Screenshot.jpg)
+!(home/krasi/Downloads/Screenshot.jpg)
