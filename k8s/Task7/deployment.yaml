@@ -19,3 +19,4 @@ spec:
         image: joji95/k8s-static-web-app
         ports:
         - containerPort: 80
+        
