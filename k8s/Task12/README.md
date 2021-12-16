@@ -31,7 +31,49 @@ $ docker tag webserver krasyg/webserver
 $ docker push krasyg/webserver
 ```
 
-## Create deployment & service and expose port 80
+## Create deployment & service and expose port 
+
+### Yaml file
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver
+spec:
+  selector:
+    matchLabels:
+      app: webserver
+  replicas: 1
+  template: 
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: tassk12-webserver 
+        image: krasyg/webserver
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:    
+    app: webserver
+  type: NodePort
+```
 
 ```
 $ kubectl apply -f depl.yaml
