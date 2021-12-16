@@ -1,13 +1,13 @@
-## Create an Nginx docker image with modified index.html
+## Create nginx docker image with modified index.html
 
+**Dockerfile**
 ```
-Dockerfile
-
 FROM nginx:latest
 COPY ./index.html /usr/share/nginx/html/index.html
+```
+**index.html**
 
-index.html
-
+```
 <!doctype html>
 <html lang="en">
 <head>
