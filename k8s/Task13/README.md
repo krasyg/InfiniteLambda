@@ -1,4 +1,4 @@
-## Create service account and role attach rolebinding
+## Create service account and role, attach rolebinding
 
 **create.yaml**
 
