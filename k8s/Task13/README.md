@@ -63,3 +63,42 @@ $ kubectl exec kubectl-pod -it -- /bin/bash
 I have no name!@kubectl-pod:/$ ls
 bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
+
+## Create nginx deployment
+**nginx-deploy.yaml**
+
+```
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-test
+spec:
+  serviceAccountName: test-user
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+ ```
+  
+ ```
+  
+$ kubectl create -f nginx-deploy.yaml 
+error: error validating "nginx-deploy.yaml": error validating data: ValidationError(Deployment.spec): unknown field "serviceAccountName" in io.k8s.api.apps.v1.DeploymentSpec; if you choose to ignore these errors, turn validation off with --validate=false
+```
+
+```
+
+$ kubectl auth can-i get deployments --all-namespaces --as system:serviceaccount:ops-am:test-user
+no
+```
