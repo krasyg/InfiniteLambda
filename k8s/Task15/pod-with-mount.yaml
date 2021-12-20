@@ -1,7 +1,7 @@
 kind: Pod 
 apiVersion: v1 
 metadata:
-  name: pod-w-mount 
+  name: test-pod-2
 spec:
   volumes:
     - name: my-volume
