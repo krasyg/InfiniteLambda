@@ -89,4 +89,24 @@ data:
   myvar: 5
   myvar2: 6
 ```
-
+## Output
+```
+# Source: task18/templates/secrets.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: "secrets"
+  namespace: test
+type: Opaque
+dataString:
+  variable: "6"
+---
+# Source: task18/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+  namespace: test
+data:
+  myvariable: "5"
+```
