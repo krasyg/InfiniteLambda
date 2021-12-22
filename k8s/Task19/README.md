@@ -41,7 +41,6 @@ spec:
   tolerations:
   - key: "mykey"
     operator: "Exists"
-    # effect: "PreferNoSchedule"
 ```
 
 ## TEST-pod if key is different
@@ -61,9 +60,9 @@ spec:
   tolerations:
   - key: "mykey12"
     operator: "Exists"
-    # value: "value"
-    # effect: "PreferNoSchedule"
+
 ```
+
 ## $ kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces
 ```
  
