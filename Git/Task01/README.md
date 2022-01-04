@@ -7,7 +7,6 @@ $ git clone git@github.com:csuvikg/tap-git.git
 ```
 
 $ echo "Krasimir Gavrilov" >> name.txt
-$ git stash
 $ git add name.txt
 $ git commit -m "adding file to new branch"
 
