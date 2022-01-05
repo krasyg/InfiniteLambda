@@ -1,0 +1,8 @@
+# python cache
+.pytest_cache/
+
+# IDEA files
+.idea/
+
+# Python virtual environment
+venv/
